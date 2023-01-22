@@ -9,7 +9,18 @@ body {
 .container {
   border: 3px solid black;
   width: 600px;
-  margin: 0 auto;
+  margin: 50px auto;
+  position: relative;
+}
+.container::after {
+  content: "SALE";
+  background-color: red;
+  color: white;
+  position: absolute;
+  top: -15px;
+  left: -25px;
+  padding: 5px 7px;
+  font-size: 12px;
 }
 h2 {
   text-align: center;
@@ -29,11 +40,38 @@ h4 {
   font-weight: bold;
   margin-bottom: 20px;
 }
+.colors {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.colors__black {
+  background-color: black;
+}
+.colors__blue {
+  background-color: blue;
+}
+.colors__red {
+  background-color: red;
+}
+.colors__yellow {
+  background-color: yellow;
+}
+.colors__green {
+  background-color: green;
+}
+.colors__brow {
+  background-color: brown;
+}
 .body__text {
   margin-bottom: 10px;
 }
 .body__link {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  display: inline-block;
 }
 a:link {
   color: black;
@@ -48,10 +86,11 @@ a:hover {
 
 .product-detail {
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 li {
   list-style: square;
-  line-height: 1.5;
+  line-height: 2;
 }
 img {
   width: 20%;
